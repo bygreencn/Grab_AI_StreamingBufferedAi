@@ -1,0 +1,228 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\StreamingBufferedAi.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#include ""XFolderDialog\\XFolderDialog.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\StreamingBufferedAi.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STREAMINGAI_DIALOG DIALOGEX 0, 0, 517, 316
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "研华模拟量输出流采集程序"
+FONT 9, "Microsoft Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "10 V",IDC_STATIC_YRANGEMAX,10,9,31,9
+    RTEXT           "0",IDC_STATIC_YRANGEMID,28,126,9,9
+    RTEXT           "-10 V",IDC_STATIC_YRANGEMIN,11,243,27,9
+    LTEXT           "0 Sec",IDC_STATIC_STARTTIME,40,253,45,9
+    RTEXT           "10 sec",IDC_STATIC_ENDTIME,409,253,77,9
+    CONTROL         "",IDC_STATIC_GRAPH,"Static",SS_BLACKFRAME,41,9,445,242
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOLABELWRAP | LVS_NOSCROLL | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,89,258,233,25
+    LTEXT           "通道曲线的颜色:",IDC_STATIC,29,266,59,8
+    CONTROL         "",IDC_SLIDER_TIMEDIV,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,416,264,70,15
+    PUSHBUTTON      "配置...",IDC_BUTTON_CONFIG,180,291,51,15
+    PUSHBUTTON      "开始",IDC_BUTTON_START,263,291,44,15
+    PUSHBUTTON      "暂停",IDC_BUTTON_PAUSE,312,291,44,15
+    PUSHBUTTON      "结束",IDC_BUTTON_STOP,359,291,44,15
+    LTEXT           "分辨率:",IDC_STATIC,403,266,23,8
+    PUSHBUTTON      "退出",IDC_BUTTON_EXIT,446,291,44,15
+END
+
+IDD_CONFIGURATION DIALOGEX 0, 0, 379, 197
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "研华模拟量输出流采集程序--设备选择及配置"
+FONT 9, "Microsoft Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "数据采集",IDC_RADIO_GRAB_OR_REVIEW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,34,14,56,8
+    CONTROL         "数据回放",IDC_RADIO_GRAB_OR_REVIEW2,"Button",BS_AUTORADIOBUTTON,102,14,56,8
+    GROUPBOX        "方式",IDC_STATIC,7,5,365,22
+    GROUPBOX        "采集",IDC_STATIC,7,29,365,101
+    COMBOBOX        IDC_COMBO_DEVICE,64,37,106,227,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CHANSTART,64,56,106,254,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CHANCOUNT,64,75,106,262,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_VALUERANGE,64,94,106,241,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CLOCKRATEPERCHAN,295,42,40,14,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "路径",IDC_BUTTON_RECORDER_PATH,324,113,41,12
+    LTEXT           "设备:",IDC_STATIC,12,41,49,8
+    LTEXT           "起始通道号:",IDC_STATIC,12,60,49,8
+    LTEXT           "通道数量:",IDC_STATIC,12,79,49,8
+    LTEXT           "测量范围:",IDC_STATIC,12,98,49,8
+    LTEXT           "记录采集数据到:",IDC_STATIC,12,115,53,8
+    EDITTEXT        IDC_EDIT_RECORDER_PATH,64,113,257,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,182,33,183,72
+    LTEXT           "每个通道的时钟频率:",IDC_STATIC,200,44,93,8
+    LTEXT           "Hz",IDC_STATIC,337,45,9,8
+    LTEXT           "小于最大采样率当一个通道对应一个ADC时；小于最大采样率按通道数做平均的值当多个个通道一个ADC，详细内容请参考手册。",IDC_STATIC,190,58,168,46
+    GROUPBOX        "回放",IDC_STATIC,7,134,365,29
+    DEFPUSHBUTTON   "确定",IDOK,253,174,50,16
+    PUSHBUTTON      "退出",IDCANCEL,309,174,50,16
+    PUSHBUTTON      "路径",IDC_BUTTON_REPLAY_PATH,324,145,41,12
+    LTEXT           "回放数据路径:",IDC_STATIC,12,147,53,8
+    EDITTEXT        IDC_EDIT_REPLAY_PATH,64,145,257,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,1,0
+ PRODUCTVERSION 3,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Advantech Co., Ltd."
+            VALUE "FileDescription", "Streaming AI"
+            VALUE "FileVersion", "3, 0, 1, 0"
+            VALUE "InternalName", "AI_Streaming.exe"
+            VALUE "LegalCopyright", "Copyright ?2010 Advantech Co., Ltd. All rights reserved."
+            VALUE "OriginalFilename", "AI_Streaming.exe"
+            VALUE "ProductName", "AI_Streaming"
+            VALUE "ProductVersion", "3, 0, 1, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_STREAMINGAI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 510
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_CONFIGURATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 372
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BACKGROUND          BITMAP                  "res\\background.bmp"
+IDB_BITMAP_LIST         BITMAP                  "res\\bitmapList.bmp"
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\StreamingBufferedAi.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#include "XFolderDialog\XFolderDialog.rc"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
